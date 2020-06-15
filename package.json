@@ -1,16 +1,16 @@
 {
   "name": "practice-npm-module",
   "version": "1.0.0",
-  "description": "",
+  "description": "To Get Korean Postposition (한국어 조사)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node kopo.js"
   },
   "keywords": [
     "korea",
     "postposition",
     "josa"
   ],
-  "author": "",
+  "author": "geysirrr",
   "license": "ISC"
 }
