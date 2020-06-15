@@ -5,7 +5,7 @@
     define([], function () {
       return Kopo;
     });
-  } else if (typeof module === 'object' && module.export) {
+  } else if (typeof module === 'object' && module.exports) {
     module.exports = Kopo;
   } else {
     root.Kopo = Kopo;
