@@ -1,4 +1,5 @@
 //  (c) 2020 geysirrr
+// TODO: to add more postposition and support array
 (function (root, Kopo) {
   if (typeof define === 'function' && define.amd) {
     define([], function () {
