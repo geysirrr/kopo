@@ -2,6 +2,16 @@
 
 https://www.npmjs.com/package/kopo
 
+https://github.com/geysirrr/kopo
+
+```bash
+# 지원하는 조사 종류. 추가를 원하실 경우 문의 바랍니다.
+을/를
+은/는
+이/가
+과/와
+```
+
 ```javascript
 // 현재 텍스트와 조사를 포함한 결과값 반환
 const kopo = new Kopo('김연아');
