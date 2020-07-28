@@ -14,11 +14,13 @@
   (function () {
     function Kopo(text) {
       this.text = text;
+      this.whitespace = '';
     }
 
     Kopo.josaType = {
       BATCHIM: 'batchim',
       NON_BATCHIM: 'nonBatchim',
+      BOTH: 'both',
     };
 
     Kopo.setDefaultJosaType = function (josaType) {
@@ -66,6 +68,9 @@
         if (Kopo.defaultJosaType === Kopo.josaType.NON_BATCHIM)
           return getPostposition(postpositionsForNonBatchim);
 
+        if (Kopo.defaultJosaType === Kopo.josaType.BOTH)
+          return firstPostposition + '(' + secondPostposition + ')';
+
         throw new Error('Invalid defaultJodaType');
       }
 
@@ -75,7 +80,9 @@
     };
 
     Kopo.prototype.get = function (postposition) {
-      return this.text + this.getOnlyPostposition(postposition);
+      return (
+        this.text + this.whitespace + this.getOnlyPostposition(postposition)
+      );
     };
 
     Kopo.prototype.isNotKorean = function () {
@@ -83,6 +90,12 @@
         getLastCharCode(this.text) < 0xac00 ||
         getLastCharCode(this.text) > 0xd7a3
       );
+    };
+
+    Kopo.prototype.space = function () {
+      this.whitespace = this.whitespace + ' ';
+
+      return this;
     };
 
     var getLastCharCode = function (text) {
