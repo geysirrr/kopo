@@ -1,5 +1,4 @@
 const assert = require('assert');
-const kopo = require('../index');
 const Kopo = require('../index');
 
 describe('한국어 조사 테스트', () => {
