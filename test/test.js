@@ -13,14 +13,6 @@ describe('한국어 조사 테스트', () => {
     assert.equal(new Kopo('Lionel messi').isNotKorean(), true);
   });
 
-  it('생성자의 인자가 한글이 아닐 때 get 함수를 호출하면 에러를 던져야 한다.', () => {
-    assert.throws(
-      () => `${new Kopo('Lionel messi').get('은/는')} Goat 이다.`,
-      Error,
-      'Text is Korean...!'
-    );
-  });
-
   it('같은 text 라면 받침이 있는 조사와 받침이 없는 조사의 순서가 바뀌더라도 같은 결과값이 나와야 한다.', () => {
     assert.equal(
       new Kopo('김연아').get('을/를'),
