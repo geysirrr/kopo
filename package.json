@@ -1,6 +1,6 @@
 {
   "name": "kopo",
-  "version": "1.1.1",
+  "version": "1.1.4",
   "description": "To Get Korean Postposition (한국어 조사)",
   "main": "index.js",
   "homepage": "https://github.com/geysirrr/kopo",
@@ -11,7 +11,11 @@
   "keywords": [
     "korea",
     "postposition",
-    "josa"
+    "josa",
+    "korean postposition",
+    "조사",
+    "한국어",
+    "한국어 조사"
   ],
   "author": "geysirrr",
   "license": "MIT",
